@@ -1,0 +1,52 @@
+.badge {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    border: 1px solid;
+    border-radius: 4px;
+    padding-right: 4px;
+    font-size: 14px;
+}
+
+.badge::before {
+    font-weight: 600;
+    font-size: 14px;
+    padding: 0 4px;
+}
+
+.cost-badge {
+    border-color: rgb(255, 165, 0);
+    color: rgb(255, 165, 0);
+    background: rgba(255, 165, 0, 0.1);
+}
+
+.cost-badge::before {
+    content: "Cost";
+    background: rgb(255, 165, 0);
+    color: white;
+}
+
+.ip-badge {
+    border-color: rgb(64, 224, 208);
+    color: rgb(64, 224, 208);
+    background: rgba(64, 224, 208, 0.1);
+}
+
+.ip-badge::before {
+    content: "Address";
+    background: rgb(64, 224, 208);
+    color: white;
+}
+
+.usage-badge {
+    border-color: rgb(50, 108, 229);
+    color: rgb(50, 108, 229);
+    background: rgba(50, 108, 229, 0.1);
+}
+
+.usage-badge::before {
+    content: "Usage";
+    background: rgb(50, 108, 229);
+    color: white;
+}

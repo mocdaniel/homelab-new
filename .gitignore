@@ -1,0 +1,6 @@
+# zensical stuff
+.cache/
+site/
+
+# Python stuff
+.venv/
