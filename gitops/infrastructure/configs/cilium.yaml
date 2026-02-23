@@ -1,0 +1,21 @@
+---
+apiVersion: "cilium.io/v2alpha1"
+kind: "CiliumL2AnnouncementPolicy"
+metadata:
+  name: "homelab"
+  namespace: "kube-system"
+spec:
+  externalIPs: true
+  loadBalancerIPs: true
+  interfaces:
+    - "end0"
+---
+apiVersion: "cilium.io/v2alpha1"
+kind: "CiliumLoadBalancerIPPool"
+metadata:
+  name: "homelab"
+  namespace: "kube-system"
+spec:
+  blocks:
+    - start: "192.168.1.20"
+      stop: "192.168.1.29"
