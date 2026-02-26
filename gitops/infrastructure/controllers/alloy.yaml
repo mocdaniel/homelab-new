@@ -4,15 +4,6 @@ kind: "Namespace"
 metadata:
   name: "alloy-system"
 ---
-apiVersion: "v1"
-kind: "ConfigMap"
-metadata:
-  name: "alloy-config"
-  namespace: "alloy-system"
-data:
-  config.alloy: |
-    hello
----
 apiVersion: "source.toolkit.fluxcd.io/v1"
 kind: "HelmRepository"
 metadata:
@@ -45,7 +36,7 @@ spec:
         create: false
         name: "alloy-config"
         key: "config.alloy"
-      stabilityLevel: "generally-available"
+      stabilityLevel: "experimental"
       enableReporting: false
-      configReloader:
-        enabled: false
+    configReloader:
+      enabled: false
