@@ -36,7 +36,22 @@ spec:
         create: false
         name: "alloy-config"
         key: "config.alloy"
-      stabilityLevel: "experimental"
       enableReporting: false
+      mounts:
+        extra:
+          - name: "containerd"
+            mountPath: "/run/containerd"
+            readOnly: true
+      securityContext:
+        privileged: true
+      stabilityLevel: "experimental"
     configReloader:
       enabled: false
+    controller:
+      hostNetwork: true
+      hostPID: true
+      volumes:
+        extra:
+          - name: "containerd"
+            hostPath:
+              path: "/run/containerd"
